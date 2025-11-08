@@ -39,7 +39,7 @@ const Navigation = () => {
             {/* Logo */}
             <div>
               <img 
-                src="/logo-removebg-preview copy.png" 
+                src="/logo1.png" 
                 alt="Company Logo" 
                 className="h-14 w-14 object-contain"
               />
