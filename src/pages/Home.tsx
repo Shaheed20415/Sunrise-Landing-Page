@@ -222,7 +222,7 @@ useEffect(() => {
                       <p className="text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed">
                         {slide.description}
                       </p>
-                      <button className="bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl">
+                      <button className="bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl ">
                         {slide.cta}
                         <ArrowRight className="w-5 h-5 ml-2 inline" />
                       </button>
@@ -1145,7 +1145,7 @@ We offer properties in prime locations with transparent terms.
       </footer>
 
       {/* Back to Top Button */}
-      <button
+      {/* <button
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         className="fixed bottom-8 right-8 bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-110 transition-all duration-300 z-50 group"
         aria-label="Back to top"
@@ -1158,9 +1158,12 @@ We offer properties in prime locations with transparent terms.
         >
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
         </svg>
-      </button>
+      </button> */}
     </div>
   );
 };
+
+
+
 
 export default Home;
