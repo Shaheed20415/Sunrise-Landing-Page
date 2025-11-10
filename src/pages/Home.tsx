@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import EnquiryForm from '../components/EnquiryForm';
 import ContactForm from '../components/ContactForm';
+import RentalSection from "./RentalSection";
+
 
   
  
@@ -8,6 +10,7 @@ import ContactForm from '../components/ContactForm';
 
 import { 
   MapPin, 
+  X,
   Phone, 
   Mail, 
   Star, 
@@ -32,6 +35,11 @@ import {
   MessageCircle,
   AlertCircle
 } from 'lucide-react';
+
+
+
+ 
+
 
 const Home = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -150,6 +158,7 @@ useEffect(() => {
 
   return () => observer.disconnect(); // ✅ clean up observer on unmount
 }, []);
+
 
 
  
@@ -647,51 +656,12 @@ Find the perfect space that matches your vision and future.
       </section>
 
       {/* Rental & Lease Section */}
-      <section id="rental" className="py-20 bg-gradient-to-br from-purple-50 to-pink-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-              Find Rental & Lease Opportunities
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Find Rental and Lease Opportunities.
-Explore flexible rental and lease options that fit your budget and lifestyle.
-We offer properties in prime locations with transparent terms.
-            </p>
-          </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              { title: "Furnished Apartment", rent: "₹25,000/month", location: "City Center", type: "Residential", image: "https://images.pexels.com/photos/280222/pexels-photo-280222.jpeg?auto=compress&cs=tinysrgb&w=800" },
-              { title: "Office Space", rent: "₹80,000/month", location: "Business District", type: "Commercial", image: "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=800" },
-              { title: "Retail Shop", rent: "₹35,000/month", location: "Shopping Area", type: "Retail", image: "https://images.pexels.com/photos/273209/pexels-photo-273209.jpeg?auto=compress&cs=tinysrgb&w=800" },
-              { title: "Warehouse", rent: "₹50,000/month", location: "Industrial Zone", type: "Industrial", image: "https://images.pexels.com/photos/380769/pexels-photo-380769.jpeg?auto=compress&cs=tinysrgb&w=800" },
-              { title: "Co-working Space", rent: "₹15,000/month", location: "Tech Hub", type: "Shared Office", image: "https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg?auto=compress&cs=tinysrgb&w=800" },
-              { title: "Studio Flat", rent: "₹18,000/month", location: "Residential Area", type: "Studio", image: "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=800" }
-            ].map((rental, index) => (
-              <div key={index} className="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition-all duration-500">
-                <img src={rental.image} alt={rental.title} className="w-full h-48 object-cover" />
-                <div className="p-6">
-                  <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-xl font-bold text-gray-800">{rental.title}</h3>
-                    <span className="text-lg font-bold text-purple-600">{rental.rent}</span>
-                  </div>
-                  <div className="flex items-center text-gray-600 mb-4">
-                    <MapPin className="w-4 h-4 mr-2" />
-                    <span className="text-sm">{rental.location}</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">{rental.type}</span>
-                    <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 text-sm">
-                      View Details
-                    </button>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+
+
+
+     <RentalSection />
+ 
 
       {/* Features / Why Choose Us Section */}
       <section className="py-20 bg-gradient-to-br from-indigo-50 to-purple-50">
