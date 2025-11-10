@@ -35,6 +35,7 @@ import {
   MessageCircle,
   AlertCircle
 } from 'lucide-react';
+import NewsletterSubscribe from './NewsletterSubscribe';
 
 
 
@@ -974,6 +975,11 @@ Find the perfect space that matches your vision and future.
           </div>
         </div>
       </section>
+
+      <NewsletterSubscribe/>
+
+
+    
       {/* Footer Section */}
       <footer className="bg-gradient-to-br from-gray-900 to-gray-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
